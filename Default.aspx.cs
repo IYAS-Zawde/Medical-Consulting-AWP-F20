@@ -9,6 +9,13 @@ public partial class _Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        using (var context = new MedicalConsulationDBEntities())
+        {
+
+            var Posts = context.Posts.ToList();
+            
+        }
         /*
         Code to add:
          - load all medical articles in DEVs like below
